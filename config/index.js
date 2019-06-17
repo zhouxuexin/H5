@@ -12,7 +12,7 @@ module.exports = {
         assetsPublicPath: '/',
         proxyTable: {
             '/server': {
-                target: 'http://10.103.15.201:8080/server',
+                target: 'http://api.kindergarten.aliyun.kidsistudy.com/',
                 changeOrigin: true,
                 pathRewrite: {
                     '^/server': ''
@@ -63,7 +63,7 @@ module.exports = {
         // Paths
         assetsRoot: path.resolve(__dirname, '../dist'),
         assetsSubDirectory: 'static',
-        assetsPublicPath: '/',
+        assetsPublicPath: './',
 
         /**
          * Source Maps

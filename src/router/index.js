@@ -9,6 +9,10 @@ export default new Router({
     routes: [{
             path: '/login',
             name: 'login',
+            meta: {
+                index: -1,
+                title: '登录'
+            },
             component: () =>
                 import ('@/view/login.vue')
 
@@ -16,6 +20,10 @@ export default new Router({
         {
             path: '/',
             name: 'Home',
+            meta: {
+                title: '首页',
+                index: 0
+            },
             component: Home
         },
         ...teacher

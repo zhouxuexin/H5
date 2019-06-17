@@ -2,7 +2,8 @@ export default [{
         path: '/todoList',
         name: 'todoList',
         meta: {
-            title: '老师每日待办事项'
+            title: '老师每日待办事项',
+            index: 1
         },
         component: () =>
             import ('@/view/teacher/todoList')
@@ -11,7 +12,8 @@ export default [{
         path: '/healthGuide',
         name: 'healthGuide',
         meta: {
-            title: '健康指导'
+            title: '健康指导',
+            index: 1
         },
         component: () =>
             import ('@/view/teacher/healthGuide')
@@ -20,7 +22,8 @@ export default [{
         path: '/healthReport',
         name: 'healthReport',
         meta: {
-            title: '健康报表'
+            title: '健康报表',
+            index: 1
         },
         component: () =>
             import ('@/view/teacher/health/healthReport')
@@ -29,7 +32,8 @@ export default [{
         path: '/dailyExamination',
         name: 'dailyExamination',
         meta: {
-            title: '每日晨检'
+            title: '每日晨检',
+            index: 1
         },
         component: () =>
             import ('@/view/teacher/health/dailyExamination')
@@ -38,7 +42,8 @@ export default [{
         path: '/rollCall',
         name: 'rollCall',
         meta: {
-            title: '班级点名'
+            title: '班级点名',
+            index: 1
         },
         component: () =>
             import ('@/view/teacher/attendance/rollCall')
@@ -47,7 +52,8 @@ export default [{
         path: '/healthCard',
         name: 'healthCard',
         meta: {
-            title: '健康卡'
+            title: '健康卡',
+            index: 1
         },
         component: () =>
             import ('@/view/teacher/health/healthCard')
@@ -56,7 +62,8 @@ export default [{
         path: '/userInfo',
         name: 'userInfo',
         meta: {
-            title: '个人中心'
+            title: '个人中心',
+            index: 1
         },
         component: () =>
             import ('@/view/teacher/userInfo')
@@ -65,7 +72,8 @@ export default [{
         path: '/myChild',
         name: 'myChild',
         meta: {
-            title: '我的孩子'
+            title: '我的孩子',
+            index: 1
         },
         component: () =>
             import ('@/view/teacher/myChild')

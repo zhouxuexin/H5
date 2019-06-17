@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <swiper :list="imgList" auto style="width:100%;margin:0 auto;" height="150px" :loop="true"
+  <div class="content-wrapper">
+    <swiper :list="imgList" auto style="width:100%;margin:0 auto;" :aspect-ratio="0.324" :loop="true"
       dots-position="center"></swiper>
     <div class="section-title">
       <svg-icon icon-class="calendar"></svg-icon>
@@ -42,17 +42,17 @@ export default {
       imgList: [
         {
           url: 'javascript:',
-          img: '../../static/WechatIMG1.jpeg',
+          img: './static/WechatIMG1.jpeg',
           title: ''
         },
         {
           url: 'javascript:',
-          img: '../../static/WechatIMG2.jpeg',
+          img: './static/WechatIMG2.jpeg',
           title: ''
         },
         {
           url: 'javascript:',
-          img: '../../static/WechatIMG3.jpeg',
+          img: './static/WechatIMG3.jpeg',
           title: ''
         }
       ]

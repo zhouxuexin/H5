@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="content-wrapper">
     <grid :cols="2" :show-lr-borders="true" :show-vertical-dividers="true">
       <grid-item link="">
         <div class="icon-box" style="background-color:#fdb748">
@@ -78,5 +78,10 @@ export default {
 .title {
   font-size: 14px;
   color: #666;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 </style>

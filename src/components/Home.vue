@@ -1,10 +1,16 @@
 <template>
   <div>
-    <swiper :list="imgList" auto style="width:100%;margin:0 auto;" height="150px" :loop="true"
+    <swiper :list="imgList" auto style="width:100%;margin:0 auto;" :aspect-ratio="0.324" :loop="true"
       dots-position="center"></swiper>
     <div class="menu-box">
       <grid :cols="3" :show-lr-borders="true" :show-vertical-dividers="true">
-        <grid-item link="/todoList">
+        <grid-item :link="item.url" v-for="(item,index) in menuList" :key="item.id">
+          <div class="icon-box" :style="{'background-color':bg_colors[index]}">
+            <svg-icon :icon-class="item.iconClass" />
+          </div>
+          <div class="title">{{item.name}}</div>
+        </grid-item>
+        <!-- <grid-item link="/todoList">
           <div class="icon-box" style="background-color:#fdb748">
             <svg-icon icon-class="todo" />
           </div>
@@ -57,41 +63,51 @@
             <svg-icon icon-class="mine" />
           </div>
           <div class="title">我的资料</div>
-        </grid-item>
+        </grid-item> -->
       </grid>
     </div>
   </div>
 </template>
 
 <script>
+
 import { Grid, GridItem, Swiper } from 'vux'
+import store from '@/store'
 export default {
   name: 'Home',
   components: {
     Grid,
     GridItem,
-    Swiper
+    Swiper,
+
+  },
+  computed: {
+    menuList () {
+      return store.getters.menus
+    }
   },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
+      bg_colors: ['#fdb748', '#73a7f4', '#e9878e', '#b68ce4', '#fdb748', '#7bcc49', '#fe9290', '#6884d1', '#7bcc49', '#fdb748', '#73a7f4', '#e9878e', '#b68ce4', '#fdb748', '#7bcc49',],
       imgList: [
         {
           url: 'javascript:',
-          img: '../../static/WechatIMG1.jpeg',
+          img: './static/WechatIMG1.jpeg',
           title: ''
         },
         {
           url: 'javascript:',
-          img: '../../static/WechatIMG2.jpeg',
+          img: './static/WechatIMG2.jpeg',
           title: ''
         },
         {
           url: 'javascript:',
-          img: '../../static/WechatIMG3.jpeg',
+          img: './static/WechatIMG3.jpeg',
           title: ''
         }
-      ]
+      ],
+
     }
   }
 }

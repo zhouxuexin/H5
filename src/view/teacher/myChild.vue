@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="content-wrapper my-child">
     <group>
       <cell title="姓名：张三" value="性别：男"></cell>
       <cell title="出生日期" is-link value="2014-02-07"></cell>
@@ -28,3 +28,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+.my-child {
+  position: relative;
+}
+</style>

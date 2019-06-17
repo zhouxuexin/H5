@@ -1,5 +1,5 @@
 <template>
-  <div class="todo-list">
+  <div class="content-wrapper todo-list">
     <div class="title">今日晨检情况</div>
     <x-table class="table">
       <tbody>

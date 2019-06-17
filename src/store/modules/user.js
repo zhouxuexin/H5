@@ -1,11 +1,12 @@
 import { login, logout, getInfo } from '@/api/user'
 import { getToken, setToken, removeToken } from '@/utils/auth'
-// import { resetRouter } from '@/router'
+import { getMenu, setMenu } from '@/utils/menu'
 
 const state = {
     token: getToken(),
     name: '',
-    avatar: ''
+    avatar: '',
+    menus: getMenu()
 }
 
 const mutations = {
@@ -17,19 +18,24 @@ const mutations = {
     },
     SET_AVATAR: (state, avatar) => {
         state.avatar = avatar
+    },
+    SET_MENU: (state, menus) => {
+        state.menus = menus
     }
 }
 
 const actions = {
     // user login
     login({ commit }, userInfo) {
-        const { username, password } = userInfo
+        const { userName, password } = userInfo
         return new Promise((resolve, reject) => {
-            login({ username: username.trim(), password: password })
-                .then(response => {
-                    const { data } = response
+            login({ userName: userName.trim(), password: password })
+                .then(data => {
                     commit('SET_TOKEN', data.token)
                     setToken(data.token)
+                        // 设置存储菜单
+                    commit('SET_MENU', data.menuList)
+                    setMenu(data.menuList)
                     resolve()
                 })
                 .catch(error => {
@@ -84,7 +90,9 @@ const actions = {
             removeToken()
             resolve()
         })
-    }
+    },
+    //getMenu
+
 }
 
 export default {

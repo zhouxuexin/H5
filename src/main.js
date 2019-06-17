@@ -6,19 +6,22 @@ import VueRouter from 'vue-router'
 import App from './App'
 import '@/styles/public.less'
 import '@/icons'
-// import Home from './components/HelloFromVux'
+import '@/permission'
 import router from './router'
 import store from './store'
+import { ViewBox } from 'vux'
+Vue.component('view-box', ViewBox)
 Vue.use(VueRouter)
 import { ToastPlugin, LoadingPlugin } from "vux"
 Vue.use(LoadingPlugin)
+import { ConfirmPlugin } from 'vux'
+Vue.use(ConfirmPlugin)
 
 Vue.use(ToastPlugin);
 
 FastClick.attach(document.body)
 
 Vue.config.productionTip = false
-
 
 /* eslint-disable no-new */
 

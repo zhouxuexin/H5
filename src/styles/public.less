@@ -1,3 +1,39 @@
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
 .app-content {
   padding: 0 10px;
+}
+
+.content-wrapper {
+  position: relative;
+}
+
+.weui-cells {
+  .weui-cell {
+    padding: 15px;
+  }
+}
+
+.vux-button-group {
+  .vux-button-tab-item {
+    height: 36px;
+    line-height: 36px;
+  }
 }

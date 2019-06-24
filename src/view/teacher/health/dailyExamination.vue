@@ -1,6 +1,6 @@
 <template>
-  <view-box>
-    <div class="content-wrapper report-wrap">
+  <div class="content-wrapper">
+    <div class="report-wrap">
       <group>
         <calendar v-model="date" title="每日晨检报告" disable-past placeholder="placeholder" @on-show="log('show')"
           @on-hide="log('hide')"></calendar>
@@ -37,7 +37,7 @@
         <e-chart :options="pie" ref="pie" autoresize></e-chart>
       </div>
     </div>
-  </view-box>
+  </div>
 </template>
 <script>
 import { Group, Cell, Calendar, XTable, VChart, VLine, VArea, VTooltip, VLegend, VBar, VPie, VScale } from 'vux'

@@ -1,5 +1,5 @@
 <template>
-  <view-box>
+  <div class="content-wrapper">
     <div class="app-content">
       <div class="logo">
         <svg-icon icon-class="logo" class="logo-icon" />
@@ -15,7 +15,7 @@
       </group>
       <x-button class="login-btn" type="primary" @click.native="onSubmit" :disabled="disabled">登录</x-button>
     </div>
-  </view-box>
+  </div>
 </template>
 <script>
 import { Group, XButton, XInput } from 'vux'

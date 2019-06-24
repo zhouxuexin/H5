@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
 import teacher from './modules/teacher'
+import librarian from './modules/librarian'
 
 Vue.use(Router)
 
@@ -15,7 +16,6 @@ export default new Router({
             },
             component: () =>
                 import ('@/view/login.vue')
-
         },
         {
             path: '/',
@@ -26,6 +26,7 @@ export default new Router({
             },
             component: Home
         },
-        ...teacher
+        ...teacher,
+        ...librarian
     ]
 })

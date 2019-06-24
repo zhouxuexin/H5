@@ -2,7 +2,7 @@ export default [{
         path: '/todoList',
         name: 'todoList',
         meta: {
-            title: '老师每日待办事项',
+            title: '待办事项',
             index: 1
         },
         component: () =>
@@ -77,5 +77,5 @@ export default [{
         },
         component: () =>
             import ('@/view/teacher/myChild')
-    },
+    }
 ]

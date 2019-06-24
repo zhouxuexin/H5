@@ -1,6 +1,6 @@
 <template>
-  <view-box>
-    <div class="content-wrapper roll-call">
+  <div class="content-wrapper">
+    <div class="roll-call">
       <group>
         <cell title="上次点名" value="未点名" @click.native=""></cell>
         <cell title="出勤人数/总人数" @click.native="" value="23/26"></cell>
@@ -14,7 +14,7 @@
     <div class="btn-wrap">
       <x-button type="primary">开始点名</x-button>
     </div>
-  </view-box>
+  </div>
 </template>
 <script>
 import { XButton, Cell, Group } from 'vux'
@@ -42,7 +42,7 @@ export default {
   padding: 20px;
   height: 80px;
   box-sizing: border-box;
-  position: absolute;
+  position: fixed;
   left: 0;
   bottom: 0;
 }

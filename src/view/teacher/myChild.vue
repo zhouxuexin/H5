@@ -29,7 +29,4 @@ export default {
 }
 </script>
 <style scoped>
-.my-child {
-  position: relative;
-}
 </style>

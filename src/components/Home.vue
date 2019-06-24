@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <view-box>
     <swiper :list="imgList" auto style="width:100%;margin:0 auto;" :aspect-ratio="0.324" :loop="true"
       dots-position="center"></swiper>
     <div class="menu-box">
@@ -9,6 +9,12 @@
             <svg-icon :icon-class="item.iconClass" />
           </div>
           <div class="title">{{item.name}}</div>
+        </grid-item>
+        <grid-item link="/libraryManagement">
+          <div class="icon-box" style="background-color:#7bcc49">
+            <svg-icon icon-class="todo" />
+          </div>
+          <div class="title">图书管理</div>
         </grid-item>
         <!-- <grid-item link="/todoList">
           <div class="icon-box" style="background-color:#fdb748">
@@ -66,7 +72,7 @@
         </grid-item> -->
       </grid>
     </div>
-  </div>
+  </view-box>
 </template>
 
 <script>

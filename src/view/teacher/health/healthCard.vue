@@ -1,6 +1,6 @@
 <template>
-  <view-box>
-    <div class="content-wrapper card-wrap">
+  <div class="content-wrapper">
+    <div class="card-wrap">
       <button-tab v-model="index" style="padding:10px;">
         <button-tab-item @on-item-click="tab">我的健康卡</button-tab-item>
         <button-tab-item @on-item-click="tab">本班健康卡</button-tab-item>
@@ -83,7 +83,7 @@
       <x-button type="primary" v-if="index==0">绑定健康卡</x-button>
       <x-button type="primary" v-else>通知家长关注微信</x-button>
     </div>
-  </view-box>
+  </div>
 </template>
 <script>
 import { XButton, XTable, ButtonTab, ButtonTabItem } from 'vux'

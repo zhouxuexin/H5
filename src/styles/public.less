@@ -1,3 +1,19 @@
+// 通用颜色
+@success: "#67C23A";
+@danger: "#F56C6C";
+@primary: "#409EFF";
+@waening: "#E6A23C";
+@info: "#909399";
+
+* {
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
 .fl {
   float: left;
 }
@@ -22,7 +38,8 @@
 }
 
 .content-wrapper {
-  position: relative;
+  // position: relative;
+  width: 100%;
 }
 
 .weui-cells {
@@ -36,4 +53,44 @@
     height: 36px;
     line-height: 36px;
   }
+}
+
+.vux-search-box {
+  .weui-search-bar {
+    padding: 10px;
+    background-color: #f8f8f9;
+  }
+
+
+  .weui-search-bar__label {
+    top: 5px;
+
+    span {
+      font-size: 14px;
+    }
+  }
+
+  .weui-icon-search {
+    font-size: 20px;
+  }
+
+  .weui-search-bar__box {
+    .weui-icon-search {
+      font-size: 20px;
+      top: 5px;
+    }
+
+    .weui-icon-clear {
+      top: 5px;
+    }
+
+    .weui-search-bar__input {
+      padding: 10px;
+    }
+  }
+
+  .weui-search-bar__cancel-btn {
+    line-height: 40px;
+  }
+
 }

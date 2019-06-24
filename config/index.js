@@ -11,11 +11,18 @@ module.exports = {
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
         proxyTable: {
-            '/server': {
+            '/login': {
                 target: 'http://api.kindergarten.aliyun.kidsistudy.com/',
                 changeOrigin: true,
                 pathRewrite: {
-                    '^/server': ''
+                    '^/login': '/login'
+                }
+            },
+            '/api': {
+                target: 'http://api.kindergarten.aliyun.kidsistudy.com/api',
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/api': ''
                 }
             }
         },

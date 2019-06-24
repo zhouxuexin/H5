@@ -1,6 +1,6 @@
 <template>
-  <view-box>
-    <div class="content-wrapper user-info">
+  <div class="content-wrapper">
+    <div class="user-info">
       <group>
         <cell title="我的身份" is-link value="老师"></cell>
       </group>
@@ -12,7 +12,7 @@
     <div class="btn-wrap">
       <x-button type="warn" @click.native="loginOut">退出登录</x-button>
     </div>
-  </view-box>
+  </div>
 </template>
 <script>
 import { Group, Cell, XButton } from 'vux'
@@ -41,7 +41,7 @@ export default {
     }
   },
   mounted () {
-    getInfo()
+    // getInfo()
   }
 }
 </script>
@@ -55,7 +55,7 @@ export default {
   padding: 20px;
   height: 80px;
   box-sizing: border-box;
-  position: absolute;
+  position: fixed;
   left: 0;
   bottom: 0;
 }

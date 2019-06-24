@@ -12,14 +12,14 @@ import store from './store'
 import { ViewBox } from 'vux'
 Vue.component('view-box', ViewBox)
 Vue.use(VueRouter)
-import { ToastPlugin, LoadingPlugin } from "vux"
+import { ToastPlugin, LoadingPlugin } from 'vux'
 Vue.use(LoadingPlugin)
 import { ConfirmPlugin } from 'vux'
 Vue.use(ConfirmPlugin)
 
-Vue.use(ToastPlugin);
+Vue.use(ToastPlugin)
 
-FastClick.attach(document.body)
+// FastClick.attach(document.body)
 
 Vue.config.productionTip = false
 

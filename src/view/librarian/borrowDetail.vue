@@ -1,42 +1,44 @@
 <template>
   <div class="content-wrapper">
     <ul class="borrow-list">
-      <li>
-        <p class="time">2019-05-03 14:32</p>
-        <p class="book-name">小马过河</p>
-        <span class="type-name red">报损</span>
-      </li>
-      <li>
-        <p class="time">2019-05-03 14:32</p>
-        <p class="book-name">小马过河</p>
-        <span class="type-name">借书</span>
-      </li>
-      <li>
-        <p class="time">2019-05-03 14:32</p>
-        <p class="book-name">小马过河</p>
-        <span class="type-name blue">还书</span>
-      </li>
-      <li>
-        <p class="time">2019-05-03 14:32</p>
-        <p class="book-name">小马过河</p>
-        <span class="type-name">借书</span>
+      <li v-for="item in borrowList" :key="item.id">
+        <p class="time">{{item.borrowTime}}</p>
+        <p class="book-name">{{item.bookName}}</p>
+        <span class="type-name red">{{status[item.status]}}</span>
       </li>
     </ul>
   </div>
 </template>
 <script>
 import { XButton } from 'vux'
+import { borrowHistory } from '@/api/borrowing'
 export default {
   components: {
     XButton
   },
   data () {
     return {
-      carNumber: ''
+      status: ['借阅中', '已归还', '丢失', '损坏'],
+      query: {
+        borrowType: 1,
+        borrowNo: '',
+        pageSize: 40,
+        prePage: 1,
+        pages: 1
+      },
+      borrowList: []
+    }
+  },
+  methods: {
+    getDetail () {
+      borrowHistory(this.query).then((data) => {
+        this.borrowList = data.list
+      })
     }
   },
   mounted () {
-    this.carNumber = this.$route.params.number
+    this.query.borrowNo = this.$route.query.borrowCode
+    this.getDetail()
   }
 }
 </script>

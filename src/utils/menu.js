@@ -3,5 +3,5 @@ export function setMenu(data) {
     return sessionStorage.setItem(NAME, JSON.stringify(data))
 }
 export function getMenu() {
-    return JSON.parse(sessionStorage.getItem(NAME))
+    return sessionStorage.getItem(NAME) ? JSON.parse(sessionStorage.getItem(NAME)) : []
 }

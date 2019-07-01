@@ -6,7 +6,6 @@ const path = require('path')
 
 module.exports = {
     dev: {
-
         // Paths
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
@@ -25,6 +24,20 @@ module.exports = {
                     '^/api': ''
                 }
             }
+            // '/login': {
+            //     target: 'http://10.103.32.75:8080/',
+            //     changeOrigin: true,
+            //     pathRewrite: {
+            //         '^/login': '/login'
+            //     }
+            // },
+            // '/api': {
+            //     target: 'http://10.103.32.75:8080/api',
+            //     changeOrigin: true,
+            //     pathRewrite: {
+            //         '^/api': ''
+            //     }
+            // }
         },
 
         // Various Dev Server settings
@@ -60,7 +73,7 @@ module.exports = {
         // (https://github.com/webpack/css-loader#sourcemaps)
         // In our experience, they generally work as expected,
         // just be aware of this issue when enabling this option.
-        cssSourceMap: false,
+        cssSourceMap: false
     },
 
     build: {

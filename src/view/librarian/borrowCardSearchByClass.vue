@@ -18,36 +18,13 @@
       <tbody>
         <tr>
           <td>王艺霖</td>
-          <td>1123</td>
+          <td>123456789</td>
           <td>4</td>
           <td>
-            <x-button type="primary" mini>借阅</x-button>
+            <x-button type="primary" mini @click.native="$router.push({name:'borrowCard',query:{borrowCode:'123456789'}})">借阅</x-button>
           </td>
         </tr>
-        <tr>
-          <td>王艺霖</td>
-          <td>1123</td>
-          <td>4</td>
-          <td>
-            <x-button type="primary" mini>借阅</x-button>
-          </td>
-        </tr>
-        <tr>
-          <td>王艺霖</td>
-          <td>1123</td>
-          <td>4</td>
-          <td>
-            <x-button type="primary" mini>借阅</x-button>
-          </td>
-        </tr>
-        <tr>
-          <td>王艺霖</td>
-          <td>1123</td>
-          <td>4</td>
-          <td>
-            <x-button type="primary" mini>借阅</x-button>
-          </td>
-        </tr>
+
       </tbody>
     </x-table>
   </div>

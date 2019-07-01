@@ -34,8 +34,11 @@ const actions = {
                     commit('SET_TOKEN', data.token)
                     setToken(data.token)
                         // 设置存储菜单
-                    commit('SET_MENU', data.menuList)
-                    setMenu(data.menuList)
+                    if (data.menuList && data.menuList.length && data.menuList[0]) {
+                        commit('SET_MENU', data.menuList)
+                        setMenu(data.menuList)
+                    }
+
                     resolve()
                 })
                 .catch(error => {
@@ -90,9 +93,8 @@ const actions = {
             removeToken()
             resolve()
         })
-    },
+    }
     //getMenu
-
 }
 
 export default {

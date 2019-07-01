@@ -9,7 +9,7 @@ export default [{
             import ('@/view/librarian/borrowing')
     },
     {
-        path: '/borrowCard/:number',
+        path: '/borrowCard',
         name: 'borrowCard',
         meta: {
             title: '借阅卡信息',
@@ -69,5 +69,15 @@ export default [{
         },
         component: () =>
             import ('@/view/librarian/bookSearch')
+    },
+    {
+        path: '/storageBooks',
+        name: 'storageBooks',
+        meta: {
+            title: '图书入库',
+            index: 1
+        },
+        component: () =>
+            import ('@/view/librarian/storageBooks')
     }
 ]

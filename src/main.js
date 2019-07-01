@@ -16,10 +16,9 @@ import { ToastPlugin, LoadingPlugin } from 'vux'
 Vue.use(LoadingPlugin)
 import { ConfirmPlugin } from 'vux'
 Vue.use(ConfirmPlugin)
-
 Vue.use(ToastPlugin)
-
-// FastClick.attach(document.body)
+import PullTo from 'vue-pull-to'
+Vue.use(PullTo)
 
 Vue.config.productionTip = false
 

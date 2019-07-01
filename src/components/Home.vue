@@ -16,6 +16,18 @@
           </div>
           <div class="title">图书管理</div>
         </grid-item>
+        <grid-item link="/storageBooks">
+          <div class="icon-box" style="background-color:#7bcc49">
+            <svg-icon icon-class="book" />
+          </div>
+          <div class="title">图书入库</div>
+        </grid-item>
+        <grid-item link="/borrowing">
+          <div class="icon-box" style="background-color:#7bcc49">
+            <svg-icon icon-class="book" />
+          </div>
+          <div class="title">图书借阅</div>
+        </grid-item>
         <!-- <grid-item link="/todoList">
           <div class="icon-box" style="background-color:#fdb748">
             <svg-icon icon-class="todo" />

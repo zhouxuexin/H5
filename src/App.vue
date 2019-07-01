@@ -14,6 +14,7 @@
 
 <script>
 import { XHeader, ViewBox } from 'vux'
+import { mapGetters } from 'vuex'
 export default {
   name: 'app',
   components: {
@@ -29,13 +30,14 @@ export default {
     }
   },
   computed: {
+    ...mapGetters(['borrowCode']),
     calcHeight () {
       return this.isLogin ? '100%' : 'calc(100% - 46px)'
     }
   },
   methods: {
     rightClick () {
-      this.rightPath && this.$router.push({ name: this.rightPath })
+      this.rightPath && this.$router.push({ name: this.rightPath, query: { borrowCode: this.borrowCode } })
     }
   },
   watch: {
